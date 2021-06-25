@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <style>
+    form
+     {
+      width: 90%;
+      margin: 60% auto;
+      background: #bc986a;
+      padding:60px 100px  80px 100px;
+      text-align:center;
+      box-shadow: 2px 2px 3px rgb(0, 0, 0, 0.1);
+      box-shadow: 2px 2px 3px rgb(0, 0, 0, 0.1);
+     }
+  </style>
+
+  <meta charset="utf-8"/>
+  <title>Simple Interest Calculator</title>
+  <link rel="stylesheet" type="text/css" href="view.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body ng-app="myapp" ng-controller='control';>
+
+<nav class="navbar" id='navbar'>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h1>{{title}}</h1>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <h3>THANK YOU FOR VISITING</h3>
+      <h2 style="font-family:Aharoni"><b>swipe down for result</b></h2>
+    </ul>
+  </div>
+</nav>
+
+<div >
+     <form>
+       <div class="form-group">
+         <label>Please enter Principal Amount(in rupees)</label>
+         <input type="number" required class="form-control" style="width:250px;" ng-model="inputData.amount">
+       </div>
+       <div class="form-group">
+         <label>Rate of Interest(in %):</label>
+           <input type="number" required class="form-control" style="width:250px;" ng-model="inputData.rate">
+       </div>
+       <div class="form-group">
+         <label>for how much Time(in months):</label>
+           <input type="number" required class="form-control" style="width:250px;" ng-model="inputData.time">
+       </div>
+       <div class="form-group">
+         <button type="submit" class="btn btn-success" ng-click="calculate()">Calculate</button>
+       </div>
+     </form>
+
+     <h2 id="result"></h2>
+</div>
+<br>
+<br>
+<br>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script src="app.js"></script>
+</html>
